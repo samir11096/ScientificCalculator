@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages{
+        stage("Git Pull"){
+            steps{
+                git url: 'https://github.com/samir11096/ScientificCalculator.git',
+                    branch: 'master'
+            }
+        }
+        stage('Maven Build and Test'){
+            steps{
+                sh 'mvn clean install'
+            }
+        }
+
+    }
+
+}
