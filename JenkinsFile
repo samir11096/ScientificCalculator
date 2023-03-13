@@ -27,10 +27,11 @@ pipeline {
              steps {
                     withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKERHUB_CREDENTIALS_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSSW')]) {
                        sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
-                     }
+                       sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/my-image"
 
-                    // Build and push the Docker image
-                    sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/my-image"
+                     }
+                     sh 'docker rmi samiraghouri/calculator:version1'
+
                   }
 
         }

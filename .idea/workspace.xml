@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="816be04c-f172-4488-95fe-86bc00849d81" name="Changes" comment="Adding Calculator Main and Test files to Github.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JenkinsFile" beforeDir="false" afterPath="$PROJECT_DIR$/JenkinsFile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678684319880</updated>
-      <workItem from="1678684320799" duration="16518000" />
+      <workItem from="1678684320799" duration="16676000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Calculator Main and Test files to Github.">
       <created>1678686752389</created>
