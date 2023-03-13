@@ -1,9 +1,9 @@
 pipeline {
     agent any
-     environment {
-        DOCKERHUB_CREDENTIALS_USR= 'samiraghouri'
-        DOCKERHUB_CREDENTIALS_PSSW = 'ak47#1234'
-     }
+    environment {
+        DOCKERHUB_CREDENTIALS_USR = credentials('docker-hub-creds').username
+        DOCKERHUB_CREDENTIALS_PSSW = credentials('docker-hub-creds').password
+      }
     stages{
         stage("Git Pull"){
             steps{
@@ -19,16 +19,18 @@ pipeline {
 
         stage("Build Docker Image"){
             steps{
-                sh 'docker build -t samiraghouri/calculator:version1 .'
+                sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/calculator:version1 .'
             }
         }
 
         stage("Push Image to DockerHub"){
-            steps{
-                sh 'docker login -u DOCKERHUB_CREDENTIALS_USR -p DOCKERHUB_CREDENTIALS_PSSW'
-                sh 'docker push samiraghouri/calculator:version1'
-                sh 'docker rmi samiraghouri/calculator:version1'
-            }
+             steps {
+                    // Login to Docker Hub
+                    sh "docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSSW"
+
+                    // Build and push the Docker image
+                    sh "docker push $DOCKERHUB_CREDENTIALS_USR/my-image"
+                  }
 
         }
 
