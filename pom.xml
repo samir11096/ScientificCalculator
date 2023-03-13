@@ -35,7 +35,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ScientificCalculator</mainClass>
+                            <mainClass>org.example.ScientificCalculator</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
