@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS_USR = credentials('docker-hub-creds').username
-        DOCKERHUB_CREDENTIALS_PSSW = credentials('docker-hub-creds').password
+        DOCKERHUB_CREDENTIALS_USR = "${credentials('docker-hub-creds').username}"
+        DOCKERHUB_CREDENTIALS_PSSW = "${credentials('docker-hub-creds').password}"
       }
     stages{
         stage("Git Pull"){
@@ -19,17 +19,17 @@ pipeline {
 
         stage("Build Docker Image"){
             steps{
-                sh 'docker build -t $DOCKERHUB_CREDENTIALS_USR/calculator:version1 .'
+                sh 'docker build -t ${DOCKERHUB_CREDENTIALS_USR}/calculator:version1 .'
             }
         }
 
         stage("Push Image to DockerHub"){
              steps {
                     // Login to Docker Hub
-                    sh "docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSSW"
+                    sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
 
                     // Build and push the Docker image
-                    sh "docker push $DOCKERHUB_CREDENTIALS_USR/my-image"
+                    sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/my-image"
                   }
 
         }
