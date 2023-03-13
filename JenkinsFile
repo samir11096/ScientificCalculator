@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS_USR = "${credentials('docker-hub-creds').username}"
-        DOCKERHUB_CREDENTIALS_PSSW = "${credentials('docker-hub-creds').password}"
+        DOCKERHUB_CREDENTIALS_USR = ''
+        DOCKERHUB_CREDENTIALS_PSSW = ''
       }
     stages{
         stage("Git Pull"){
@@ -25,8 +25,9 @@ pipeline {
 
         stage("Push Image to DockerHub"){
              steps {
-                    // Login to Docker Hub
-                    sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
+                    withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', usernameVariable: 'DOCKERHUB_CREDENTIALS_USR', passwordVariable: 'DOCKERHUB_CREDENTIALS_PSSW')]) {
+                       sh "docker login -u ${DOCKERHUB_CREDENTIALS_USR} -p ${DOCKERHUB_CREDENTIALS_PSSW}"
+                     }
 
                     // Build and push the Docker image
                     sh "docker push ${DOCKERHUB_CREDENTIALS_USR}/my-image"
