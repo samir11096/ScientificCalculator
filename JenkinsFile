@@ -1,5 +1,9 @@
 pipeline {
     agent any
+     environment {
+        DOCKERHUB_CREDENTIALS_USR= 'samiraghouri'
+        DOCKERHUB_CREDENTIALS_PSSW = 'ak47#1234'
+     }
     stages{
         stage("Git Pull"){
             steps{
@@ -17,6 +21,15 @@ pipeline {
             steps{
                 sh 'docker build -t samiraghouri/calculator:version1 .'
             }
+        }
+
+        stage("Push Image to DockerHub"){
+            steps{
+                sh 'docker login -u DOCKERHUB_CREDENTIALS_USR -p DOCKERHUB_CREDENTIALS_PSSW'
+                sh 'docker push samiraghouri/calculator:version1'
+                sh 'docker rmi samiraghouri/calculator:version1'
+            }
+
         }
 
     }
