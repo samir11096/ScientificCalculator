@@ -35,6 +35,11 @@ pipeline {
                   }
 
         }
+        stage("Ansibile Deployment"){
+            steps{
+                ansiblePlaybook disableHostKeyChecking: true, installation: 'ansible2', inventory: 'dev.inv', playbook: 'playbook.yml'
+            }
+        }
 
     }
 

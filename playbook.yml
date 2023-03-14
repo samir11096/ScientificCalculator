@@ -1,0 +1,20 @@
+---
+- hosts: webserver
+  vars:
+    - dockerhub_username: "samiraghouri"
+    - dockerhub_password: "Ak47#1234"
+    - docker_container_name: "calcy"
+    - docker_image_name : "calculator:version1"
+  tasks:
+    - name: log into docker hub
+      docker_login:
+        username: "{{dockerhub_username}}"
+        password: "{{dockerhub_password}}"
+
+    - name: ensure a container is running
+      docker_container:
+        name: "{{docker_container_name}}"
+        state: started
+        image: "{{dockerhub_username}}/{{docker_image_name}}"
+        pull: true
+
