@@ -1,6 +1,7 @@
 ---
 - hosts: webserver
   vars:
+    - dockerhub_username: "samiraghouri"
     - docker_container_name: "calcy"
     - docker_image_name : "calculator:version1"
   tasks:
