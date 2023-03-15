@@ -14,10 +14,12 @@
         name: "{{ docker_container_name }}"
         image: "{{ dockerhub_username }}/{{ docker_image_name }}"
         state: present
-
-    - name: Run container with interactive shell
-      docker_container:
-        name: "{{docker_container_name}}"
-        image: "{{dockerhub_username}}/{{docker_image_name}}"
         tty: true
         interactive: true
+
+#    - name: Run container with interactive shell
+#      docker_container:
+#        name: "{{docker_container_name}}"
+#        image: "{{dockerhub_username}}/{{docker_image_name}}"
+#        tty: true
+#        interactive: true
