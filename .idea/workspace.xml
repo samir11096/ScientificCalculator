@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="816be04c-f172-4488-95fe-86bc00849d81" name="Changes" comment="Adding Calculator Main and Test files to Github.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playbook.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,7 +108,7 @@
       <workItem from="1678684320799" duration="17629000" />
       <workItem from="1678779311278" duration="3930000" />
       <workItem from="1678784103709" duration="643000" />
-      <workItem from="1678803199361" duration="10213000" />
+      <workItem from="1678803199361" duration="10415000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Calculator Main and Test files to Github.">
       <created>1678686752389</created>
