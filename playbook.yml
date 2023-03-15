@@ -9,8 +9,16 @@
       docker_image:
         name: "{{dockerhub_username}}/{{docker_image_name}}"
         source: pull
-    - name: Start Docker container
+    - name: Create a docker container
       docker_container:
         name: "{{ docker_container_name }}"
         image: "{{ dockerhub_username }}/{{ docker_image_name }}"
-        state: started
+        state: present
+
+    - name: Run container with interactive shell
+      docker_container:
+        name: "{{docker_container_name}}"
+        image: "{{docker_image_name}}"
+        command: /bin/bash
+        tty: true
+        interactive: true
