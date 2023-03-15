@@ -19,6 +19,5 @@
       docker_container:
         name: "{{docker_container_name}}"
         image: "{{dockerhub_username}}/{{docker_image_name}}"
-        command: /bin/bash
         tty: true
         interactive: true
