@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="816be04c-f172-4488-95fe-86bc00849d81" name="Changes" comment="Adding Calculator Main and Test files to Github.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/playbook.yml" beforeDir="false" afterPath="$PROJECT_DIR$/playbook.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev.inv" beforeDir="false" afterPath="$PROJECT_DIR$/dev.inv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ScientificCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ScientificCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Tag Library Descriptor" />
       </list>
     </option>
   </component>
@@ -27,6 +30,11 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="workspaceImportEnabled" value="true" />
@@ -54,12 +62,25 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.ScientificCalculatorTest">
+  <component name="RunManager" selected="Application.ScientificCalculator">
+    <configuration name="ScientificCalculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ScientificCalculator" />
+      <module name="ScientificCalculator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ScientificCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ScientificCalculator" />
       <extension name="coverage">
@@ -93,6 +114,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ScientificCalculator" />
         <item itemvalue="JUnit.ScientificCalculatorTest" />
         <item itemvalue="JUnit.ScientificCalculatorTest.testSquareRoot" />
       </list>
@@ -109,7 +131,9 @@
       <workItem from="1678684320799" duration="17629000" />
       <workItem from="1678779311278" duration="3930000" />
       <workItem from="1678784103709" duration="643000" />
-      <workItem from="1678803199361" duration="12208000" />
+      <workItem from="1678803199361" duration="13109000" />
+      <workItem from="1678882840129" duration="3931000" />
+      <workItem from="1678887282742" duration="913000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Calculator Main and Test files to Github.">
       <created>1678686752389</created>
@@ -123,6 +147,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">

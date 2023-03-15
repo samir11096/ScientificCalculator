@@ -3,12 +3,19 @@ package org.example;
 import java.util.Scanner;
 import java.lang.Math;
 
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 public class ScientificCalculator {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    private static final Logger logger = LogManager.getLogger(ScientificCalculator.class);
 
+    public static void main(String[] args) {
+//        Configurator.initialize("log4j2.xml"); // initialize Log4j
+
+        Scanner scanner = new Scanner(System.in);
         while (true) {
+            logger.info("HELLO WORLD");
             System.out.println("Scientific Calculator");
             System.out.println("1. Square root");
             System.out.println("2. Factorial");
