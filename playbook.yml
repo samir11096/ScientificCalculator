@@ -8,8 +8,7 @@
     - name: Pull an image
       docker_image:
         name: "{{dockerhub_username}}/{{docker_image_name}}"
-        pull: true
-
+        source: pull
     - name: Start Docker container
       docker_container:
         name: "{{ docker_container_name }}"
