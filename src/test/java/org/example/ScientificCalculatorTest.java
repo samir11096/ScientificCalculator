@@ -1,60 +1,64 @@
-//package org.example;
-//import static org.junit.Assert.*;
-//import org.junit.Test;
-//import java.io.ByteArrayInputStream;
-//import java.io.ByteArrayOutputStream;
-//import java.io.PrintStream;
-//public class ScientificCalculatorTest {
-//    ScientificCalculator sc = new ScientificCalculator();
-//
-//    @Test
-//    public void testSquareRoot() {
-//        // set the input to the square root function
-//        String input = "9\n";
-//        System.setIn(new ByteArrayInputStream(input.getBytes()));
-//
-//        // redirect System.out to a ByteArrayOutputStream
-//        ByteArrayOutputStream output = new ByteArrayOutputStream();
-//        System.setOut(new PrintStream(output));
-//
-//        // call the square root function
-//        sc.squareRoot();
-//
-//        // check the output
-//        String expectedOutput = "Enter a number: The square root of 9.00 is 3.00\n";
-//        assertEquals(expectedOutput, output.toString());
-//    }
-//    @Test
-//    public void testFactorial() {
-//        String input = "5\n";
-//        System.setIn(new ByteArrayInputStream(input.getBytes()));
-//        ByteArrayOutputStream output = new ByteArrayOutputStream();
-//        System.setOut(new PrintStream(output));
-//        sc.factorial();
-//        String expected = "Enter a number: The factorial of 5 is 120\n";
-//        assertEquals(expected, output.toString());
-//    }
-//
-//    @Test
-//    public void testNaturalLog() {
-//        String input = "2.71828\n";
-//        System.setIn(new ByteArrayInputStream(input.getBytes()));
-//        ByteArrayOutputStream output = new ByteArrayOutputStream();
-//        System.setOut(new PrintStream(output));
-//        sc.naturalLog();
-//        String expected = "Enter a number: The natural logarithm of 2.72 is 1.00\n";
-//        assertEquals(expected, output.toString());
-//    }
-//
-//    @Test
-//    public void testPower() {
-//        String input = "2\n3\n";
-//        System.setIn(new ByteArrayInputStream(input.getBytes()));
-//        ByteArrayOutputStream output = new ByteArrayOutputStream();
-//        System.setOut(new PrintStream(output));
-//        sc.power();
-//        String expected = "Enter the base: Enter the exponent: 2.00 raised to the power of 3.00 is 8.00\n";
-//        assertEquals(expected, output.toString());
-//    }
-//
-//}
+package org.example;
+import static org.junit.Assert.*;
+import org.junit.Test;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+public class ScientificCalculatorTest {
+    ScientificCalculator sc = new ScientificCalculator();
+
+
+    private static final double DELTA = 1e-15;
+
+    @Test
+    public void squareRootTruePositive(){
+        assertEquals("Square Root of number for True Positive", 3.0, sc.squareRoot(9), DELTA);
+        assertEquals("Square Root of number for True Positive", 4.0, sc.squareRoot(16), DELTA);
+        assertEquals("Square Root of number for True Positive", Double.NaN, sc.squareRoot(-10), DELTA);
+    }
+
+    @Test
+    public void squareRootFalsePositive(){
+        assertNotEquals("Square Root of number for False Positive", 4.0, sc.squareRoot(10), DELTA);
+        assertNotEquals("Square Root of number for False Positive", 5.0, sc.squareRoot(16), DELTA);
+        assertNotEquals("Square Root of number for False Positive", 5.0, sc.squareRoot(-16), DELTA);
+    }
+
+    @Test
+    public void factorialTruePositive(){
+
+        assertEquals("Factorial of number for True positive", 6.0,sc.factorial(3), DELTA);
+        assertEquals("Factorial of number for True positive", 120.0,sc.factorial(5), DELTA);
+    }
+
+    @Test
+    public void factorialFalsePositive(){
+        assertNotEquals("Factorial of number for False positive", 8.0,sc.factorial(3), DELTA);
+        assertNotEquals("Factorial of number for False positive", 60.0,sc.factorial(5), DELTA);
+    }
+
+    @Test
+    public void naturalLogTruePositive(){
+        assertEquals("Naturallog of number for True positive", 2.833213344056216,sc.naturalLog(17), DELTA);
+        assertEquals("Naturallog of number for True positive", 1.791759469228055,sc.naturalLog(6), DELTA);
+    }
+
+    @Test
+    public void naturalLogFalsePositive(){
+        assertNotEquals("Naturallog of number for False positive", 2.833213344056216,sc.naturalLog(14), DELTA);
+        assertNotEquals("Naturallog of number for False positive", 1.791759469228055,sc.naturalLog(9), DELTA);
+        assertNotEquals("Naturallog of number for False positive", 0, sc.naturalLog(0), DELTA);
+    }
+
+    @Test
+    public void powerTruePositive(){
+        assertEquals("Power of number for True positive", 4.0,sc.power(2, 2), DELTA);
+        assertEquals("Power of number for True positive", 27.0,sc.power(3,3), DELTA);
+    }
+
+    @Test
+    public void powerFalsePositive(){
+        assertNotEquals("Power of number for False positive", 4.0,sc.power(2, 3), DELTA);
+        assertNotEquals("Power of number for False positive", 5.0,sc.power(3,3), DELTA);
+    }
+}

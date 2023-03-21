@@ -1,2 +1,2 @@
 [webserver]
-172.16.201.76 ansible_user=user1 ansible_sudo_pass=1234
+127.0.0.1 ansible_user=user1
