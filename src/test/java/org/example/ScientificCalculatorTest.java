@@ -1,9 +1,7 @@
 package org.example;
 import static org.junit.Assert.*;
 import org.junit.Test;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+
 public class ScientificCalculatorTest {
     ScientificCalculator sc = new ScientificCalculator();
 
