@@ -1,0 +1,31 @@
+2023-03-21 09:22:31,702 INFO o.e.ScientificCalculator [main] Enter the base: 
+2023-03-21 09:22:31,707 INFO o.e.ScientificCalculator [main] Enter the exponent: 
+2023-03-21 09:22:31,712 INFO o.e.ScientificCalculator [main] 2.00 raised to the power of 3.00 is 8.00
+
+2023-03-21 09:22:31,718 INFO o.e.ScientificCalculator [main] Enter a number: 
+2023-03-21 09:22:31,727 INFO o.e.ScientificCalculator [main] The factorial of 5 is 120
+
+2023-03-21 09:22:31,729 INFO o.e.ScientificCalculator [main] Enter a number: 
+2023-03-21 09:22:31,731 INFO o.e.ScientificCalculator [main] The natural logarithm of 2.72 is 1.00
+
+2023-03-21 09:22:31,732 INFO o.e.ScientificCalculator [main] Enter a number: 
+2023-03-21 09:22:31,735 INFO o.e.ScientificCalculator [main] The square root of 9.00 is 3.00
+2023-03-21 11:34:40,173 INFO o.e.ScientificCalculator [main] Scientific Calculator
+2023-03-21 11:34:40,179 INFO o.e.ScientificCalculator [main] 1. Square root
+2023-03-21 11:34:40,179 INFO o.e.ScientificCalculator [main] 2. Factorial
+2023-03-21 11:34:40,179 INFO o.e.ScientificCalculator [main] 3. Natural logarithm
+2023-03-21 11:34:40,180 INFO o.e.ScientificCalculator [main] 4. Power
+2023-03-21 11:34:40,180 INFO o.e.ScientificCalculator [main] 5. Exit
+2023-03-21 11:34:40,180 INFO o.e.ScientificCalculator [main] Enter your choice: 
+2023-03-21 11:38:02,523 INFO o.e.ScientificCalculator [main] Enter the base: 
+2023-03-21 11:38:02,531 INFO o.e.ScientificCalculator [main] Enter the exponent: 
+2023-03-21 11:38:02,537 INFO o.e.ScientificCalculator [main] 2.00 raised to the power of 3.00 is 8.00
+
+2023-03-21 11:38:02,545 INFO o.e.ScientificCalculator [main] Enter a number: 
+2023-03-21 11:38:02,554 INFO o.e.ScientificCalculator [main] The factorial of 5 is 120
+
+2023-03-21 11:38:02,555 INFO o.e.ScientificCalculator [main] Enter a number: 
+2023-03-21 11:38:02,559 INFO o.e.ScientificCalculator [main] The natural logarithm of 2.72 is 1.00
+
+2023-03-21 11:38:02,561 INFO o.e.ScientificCalculator [main] Enter a number: 
+2023-03-21 11:38:02,564 INFO o.e.ScientificCalculator [main] The square root of 9.00 is 3.00

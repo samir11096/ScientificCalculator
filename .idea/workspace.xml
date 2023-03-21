@@ -6,9 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="816be04c-f172-4488-95fe-86bc00849d81" name="Changes" comment="Adding Calculator Main and Test files to Github.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dev.inv" beforeDir="false" afterPath="$PROJECT_DIR$/dev.inv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ScientificCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ScientificCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ScientificCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ScientificCalculatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +138,10 @@
       <workItem from="1678784103709" duration="643000" />
       <workItem from="1678803199361" duration="13109000" />
       <workItem from="1678882840129" duration="3931000" />
-      <workItem from="1678887282742" duration="913000" />
+      <workItem from="1678887282742" duration="2279000" />
+      <workItem from="1678959711525" duration="613000" />
+      <workItem from="1679236920565" duration="3958000" />
+      <workItem from="1679370280537" duration="6931000" />
     </task>
     <task id="LOCAL-00001" summary="Adding Calculator Main and Test files to Github.">
       <created>1678686752389</created>
