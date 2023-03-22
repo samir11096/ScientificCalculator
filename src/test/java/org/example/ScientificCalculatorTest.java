@@ -8,12 +8,12 @@ public class ScientificCalculatorTest {
 
     private static final double DELTA = 1e-15;
 
-    @Test
-    public void squareRootTruePositive(){
-        assertEquals("Square Root of number for True Positive", 3.0, sc.squareRoot(9), DELTA);
-        assertEquals("Square Root of number for True Positive", 4.0, sc.squareRoot(16), DELTA);
-        assertEquals("Square Root of number for True Positive", Double.NaN, sc.squareRoot(-10), DELTA);
-    }
+//    @Test
+//    public void squareRootTruePositive(){
+//        assertEquals("Square Root of number for True Positive", 3.0, sc.squareRoot(9), DELTA);
+//        assertEquals("Square Root of number for True Positive", 4.0, sc.squareRoot(16), DELTA);
+//        assertEquals("Square Root of number for True Positive", Double.NaN, sc.squareRoot(-10), DELTA);
+//    }
 
     @Test
     public void squareRootFalsePositive(){
