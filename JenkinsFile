@@ -37,7 +37,6 @@ pipeline {
         }
         stage("Ansibile Deployment"){
             steps{
-//                 ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'dev.inv', playbook: 'playbook.yml'
                    sh 'ansible-playbook -i dev.inv playbook.yml'
             }
         }
