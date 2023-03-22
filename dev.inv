@@ -1,4 +1,2 @@
 [webserver]
-127.0.0.1 ansible_user=user1
-
-
+127.0.0.1 ansible_user=ansible_usr
